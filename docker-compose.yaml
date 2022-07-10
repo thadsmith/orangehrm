@@ -25,6 +25,8 @@ services:
   mariadb:
     image: mariadb:10.2
     restart: unless-stopped
+    ports:
+      - "3306:3306"
     volumes:
       - ./db_orange:/var/lib/mysql
     environment:
